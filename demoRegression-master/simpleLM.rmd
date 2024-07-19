@@ -36,8 +36,8 @@ for model length~neck, adjusted r^2 = 0.75
 ```{r}
 simp <- lm(LENGTH~AGE,data=bears)
 plot(LENGTH~AGE,data=bears)
-abline(age)
-summary.lm(age)
+abline(simp)
+summary.lm(simp)
 ```
 adjusted $r^2$ for age model is 0.51, this is less than the adjusted $r^2$ for neck , so this model is not as good as the neck model. 
 
@@ -55,10 +55,11 @@ adjusted $r^2$ for chest length is 0.78, this is greater than the adjusted $r^2$
 ```{r}
 simp <- lm(LENGTH~HEADWTH,data=bears)
 plot(LENGTH~HEADWTH,data=bears)
-abline(headwidthModel)
-summary.lm(headwidthModel)
+abline(simp)
+summary.lm(simp)
 ```
-
+adjusted $r^2$ for headwth is 0.53
+adjusted $r^2$ for headwth is 0.53, this is less than adjusted $r^2$ for neck, so this model is not greater than neck model.
 
 
 
