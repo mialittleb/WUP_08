@@ -48,7 +48,7 @@ abline(chestModel)
 summary.lm(chestModel)
 ```
 
-adjusted $r^2$ for chest length is 0.78, this is greater than the adjusted $r^2$ for neck, so this model is better than neck and age model.
+adjusted $r^2$ for chest length is 0.78, this is greater than the adjusted $r^2$ for neck and age so this model is better than neck and age model.
 
  
 
@@ -58,7 +58,7 @@ plot(LENGTH~HEADWTH,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-adjusted $r^2$ for headwth is 0.53, this is less than adjusted $r^2$ for neck, so this model is not greater than neck,age,or chest models.
+adjusted $r^2$ for headwth is 0.53, this is less than adjusted $r^2$ for neck,age,and chest so this model is not greater than neck,age,or chest models.
 
 
 ```{r}
@@ -68,14 +68,30 @@ plot(LENGTH~SEX,data=bears)
 summary.lm(simp)
 ```
 
-adjusted $r^2$ is 0.00, this is less than the adjusted $r^2$ of neck, headwth,chest,and age models.
+adjusted $r^2$ for sex is 0.00, this is less than the adjusted $r^2$ of neck, headwth,chest,and age models.
 
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
 
+summary.lm(simp)
+```
 
+adjusted $r^2$ is 0.74, the adjusted $r^2$ is less than neck, chest, and weight models but less than sex model.
 
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
 
+summary.lm(simp)
+```
 
+adjusted $r^2$ for headlen is 0.84 which is greater than all model so it is the best model.
 
+```{r}
+simp <- lm(WEIGHT~LENGTH,data=bears)
+plot(WEIGHT~LENGTH,data=bears)
 
-
-
+summary.lm(simp)
+```
+adjusted $r^2$ of length is 0.74, that is greater than neck.
