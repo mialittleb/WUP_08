@@ -77,3 +77,5 @@ adjusted $r^2$ is 0.00, this is less than the adjusted $r^2$ of neck, headwth,ch
 
 
 
+
+
