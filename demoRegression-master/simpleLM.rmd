@@ -94,4 +94,11 @@ plot(WEIGHT~LENGTH,data=bears)
 
 summary.lm(simp)
 ```
-adjusted $r^2$ of length is 0.74, that is greater than neck.         
+adjusted $r^2$ of length is 0.74, that is greater than neck.   
+
+
+
+
+
+
+
